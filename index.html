@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+	<!--
+	Author: 	Amir Armion
+	Version: V.01
+	-->
+	<head>
+		<title>Store</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+
+		<!-- CSS Stylesheet -->
+		<link href="css/styles.css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+		<script src="scripts/animation.js" defer></script>		
+	</head>
+
+	<body>
+		<div id="wrapper">
+            <header>
+				<div>
+					<h1>Discover your next adventure...</h1>
+				</div>
+            </header>
+
+			<!-- Main -->
+
+			<main>
+				<section>
+					<h2>Product: Bike</h2>
+					<article>
+						<h3>Bike LTD Race</h3>
+						<div>
+							<div>
+								<img id="main-image" src="images/bike-1.jpg" alt="bike-1">
+							</div>
+
+							<div class="all-buttons slides">
+								<button id="btn-back"><i class="material-icons">arrow_back</i></button>
+								<button id="reset">Reset</button>								
+								<button id="btn-next"><i class="material-icons">arrow_forward</i></button>
+							</div>
+	
+							<div class="all-buttons animation">
+								<button id="btn-start">Start Animation</button>
+								<button id="btn-stop">Stop Animation</button>
+							</div>
+						</div>
+					</article>									
+				</section>
+			</main>
+
+			<!-- End -->
+
+			<footer>
+				<small class="footer-adj black">&copy; Web Development with JavaScript</small>
+			</footer>
+
+			<!--
+			the popup
+			-->
+			<aside id="pop-up"> 
+				<div>
+					<button id="close-pop-up">&#x2715;</button>       
+					<h3>Hello Dear User,</h3>
+					<p><b>Instruction:</b></p>
+					<p>To rotate the view of the bike, please click on the "<b>Start Animation</b>" button. For stopping the animation, please click on "<b>Stop Animation</b>" button.</p>
+					<p>And also, to see each bike's slide individually, please use "&#x2190;" and "&#x2192;" buttons.</p>
+				</div>
+			</aside>  
+		</div>
+	</body>
+</html>

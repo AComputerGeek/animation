@@ -1,0 +1,652 @@
+/*
+styles.css
+*/
+
+/* 
+--------------
+Browser Resets
+--------------
+*/
+@import url("./normalize.css");
+
+/* 
+---------
+Font Face
+---------
+*/
+@font-face 
+{
+    font-family: 'open_sansregular';
+    src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face 
+{
+    font-family: 'bree_serifregular';
+    src: url('../fonts/breeserif-regular-webfont.woff2') format('woff2'),
+         url('../fonts/breeserif-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face 
+{
+    font-family: 'cantarellregular';
+    src: url('cantarell-regular-webfont.woff2') format('woff2'),
+         url('cantarell-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html 
+{
+	box-sizing: border-box;
+	font-size: 1rem;
+	font-family: "bree_serifregular", arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after 
+{
+	box-sizing: inherit;
+}
+
+body
+{
+    font-family: "open_sansregular", tahoma, serif;
+	background-color: gray;	
+	margin: 0px;
+	color: #05445E;
+
+    background-image: url("../images/main-background.jpg");
+    background-repeat: no-repeat;	
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+:root
+{
+    /* page specific colors */    
+    --main-color: rgb(37,44,88);
+    --main-color-transparent: rgba(37,44,88, .25);    
+    --second-color: rgb(215,114,124);    
+    --second-color-transparent: rgba(215,114,124, 0.25);
+    
+    /* universal palette */
+    --dark-color: #242424;             /* near-but-not black */
+    --light-color: rgb(245, 245, 245); /* not-quite white */    
+    --code-color: rgb(233, 233, 233);  /* code examples stand out from block text */
+    --bad-color: rgb(85, 0, 0);        /* red means 'it's time to panic!' */  
+    --good-color: rgb(22, 75, 22);     /* green means 'let's rock!' */    
+
+    /* fonts */
+    --heading-font-face: "leaguespartan-bold-webfont";
+    --block-text-font-face: "fira_sansregular";
+}
+
+/* 
+------
+Header 
+------
+*/
+header
+{
+    background-color: #8cffff;
+    height: 90px;
+}
+
+main
+{	
+    background-color: white;
+    padding: 10px;
+    flex: 1;
+}
+
+section
+{
+    background-color: white;
+    border: solid 2px #2FF3E0;
+    border-radius: 5px;
+    padding: 13px;
+}
+
+article 
+{
+    padding: 10px;
+    border: solid 2px rgb(118, 228, 255);
+    border-radius: 5px;
+    margin-top: 15px;
+
+    box-shadow: 0 0 0 1px rgb(213, 254, 255),
+                0 0 0 3px rgb(0, 193, 200);
+}
+
+h1
+{
+    font-family: "bree_serifregular", "open_sansregular", arial, sans-serif;
+    padding-left: 20px;
+    line-height: 55px;
+    font-size: 1.4rem;
+}
+
+h2
+{
+    font-size: 1.15rem;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: #1A4A81;
+}
+
+h3
+{
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 22px;
+}
+
+p
+{
+    line-height: 20px;
+    color: white;
+    font-size: 0.85rem;
+}
+
+img
+{
+    display: block;
+    width: 92%;
+    height: auto;
+    margin: 10px auto;
+}
+
+/* 
+-------
+Buttons
+-------
+*/
+button
+{
+    border-radius: 5px;
+    background-color: rgb(157, 250, 255);
+    color: #7D2AE8;
+    border: solid 2px rgb(0, 124, 120);
+    box-shadow: 2px 2px 1px var(--main-color);
+    font-weight: bolder;
+    padding: 5px 7px 5px 7px;
+    display: block;
+    margin: 10px 5px;
+    margin-bottom: 5px;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+button:hover, button:focus, button:active
+{
+    border: solid 2px rgb(0, 124, 120);
+    background-color: #7D2AE8;
+    color: white;
+    cursor: pointer;
+}
+
+.all-buttons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.all-buttons .material-icons
+{
+    font-size: 0.8rem;
+    font-weight: bolder;
+    padding: 0px;
+    line-height: 15px;
+}
+
+.slides button
+{
+    padding: 4px 6px;
+}
+
+.animation button
+{
+    margin-bottom: 10px;
+}
+
+/* 
+------
+Footer
+------
+*/
+footer
+{
+    background-color: #8cffff;
+    height: 60px;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-adj
+{
+    font-size: 0.85rem;
+    text-align: center;
+    margin: 0px;
+}
+
+/* 
+------
+a link
+------
+*/
+a:link
+{
+    color: #7D2AE8;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-decoration: underline;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+a:hover
+{
+    color: rgb(59, 191, 243);
+    text-decoration: underline;
+}
+
+a:visited
+{
+    color: gray;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:focus
+{
+    color: red;
+}
+
+/* 
+Pop up
+*/
+#pop-up
+{
+    display: none;
+
+	/* remove this popup from normal page flow */
+    position: fixed;
+    top: 0px;
+    left: 0px;    
+
+	/* fill the entire viewport */
+    width: 100vw;
+    height: 100vh;   
+
+	/* ensure it is over-top all other page elements */
+	z-index: 1000;
+
+	/* transparency allows user to see content behind */
+	background-color: rgba(179, 255, 255, 0.2); 
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#pop-up div
+{
+	/* vertically/horizontally center this element */
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	/* basic box model stuff*/
+	max-width: 220px;
+	min-width: 220px;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 0 0 2px rgb(145, 197, 199),
+		        0 0 0 4px cadetblue, 
+				0 0 0 6px rgb(39, 103, 105);
+	background-color: cadetblue;
+	color: white;
+}
+
+/* the close X button */
+#close-pop-up
+{
+	background-color: white;
+	color: rgb(0, 136, 141);
+	border-radius: 5px;
+    font-size: 0.85rem;
+	font-weight: bold;
+	border: solid 3px rgb(39, 103, 105);
+
+	/*
+	make a 'hand' pointer icon appear on mouseover
+	otherwise it will just be the usual mouse cursor arrow
+	*/
+	cursor: pointer;
+
+	/*
+	stick this X button in the 
+	top right corner of the popup
+	*/
+	position: absolute;
+	top: 0px;
+	right: 7px;
+}
+
+#pop-up button
+{
+    padding: 4px 6px;
+}
+
+/* 
+-----------
+ID Selector
+-----------
+*/
+#wrapper
+{
+    border-left: solid 2px rgb(200, 200, 200);
+    border-right: solid 2px rgb(200, 200, 200);
+    max-width: 900px;
+    margin: 0px auto ;
+    background-color: lightgray;
+
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* 
+==========
+All Medias 
+==========
+*/
+
+/* --------------------------- min-width: 320px  --------------------------- */
+@media (min-width: 320px)
+{ 
+    section p
+    {
+        font-size: 0.95rem;
+        line-height: 20px;
+        text-align: left;
+        color: #05445E;
+        margin: 15px 0px;
+    }
+}
+
+/* --------------------------- min-width: 500px  --------------------------- */
+@media (min-width: 500px)
+{
+    header 
+    {
+        height: 100px;
+    }
+
+    main 
+    {
+        padding: 15px;
+    }
+
+    section
+    {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    article
+    {
+        padding: 15px;
+        box-shadow: 0 0 0 2px rgb(213, 254, 255),
+                    0 0 0 5px rgb(0, 193, 200);
+    }
+
+    h1
+    {
+        padding-left: 25px;
+        line-height: 65px;
+        font-size: 1.5rem;
+    }
+
+    h2
+    {
+        padding-left: 0px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+        color: #1A4A81;
+        padding-left: 0px;
+        font-size: 1.4rem;
+    }
+    
+    h3
+    {
+        font-size: 1.15rem;
+    }
+
+    p
+    {
+        font-size: 0.95rem;
+        line-height: 22px;
+    }
+
+    img
+    {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    button
+    {
+        border-radius: 5px;
+        padding: 7px 12px 7px 12px;
+        font-size: 1rem;
+    }
+
+    .all-buttons .material-icons
+    {
+        font-size: 1rem;
+        padding: 0px;
+        line-height: 22px;
+    }
+
+    .slides button
+    {
+        padding: 5px 10px;
+    }
+
+    .animation button
+    {
+        margin-bottom: 15px;
+    }
+
+    section p 
+    {
+        font-size: 1rem;
+    }
+
+    footer 
+    {
+        height: 70px;
+    }
+
+    .footer-adj
+    {
+        font-size: 0.95rem;
+    }
+
+    /* 
+    Pop up
+    */
+    #pop-up div
+    {
+        /* basic box model stuff */
+        max-width: 300px;
+        min-width: 300px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 0 2px rgb(145, 197, 199),
+                    0 0 0 4px cadetblue, 
+                    0 0 0 8px rgb(39, 103, 105);
+    }
+
+    /* the close X button */
+    #close-pop-up
+    {
+        border-radius: 8px;
+        font-size: 1rem;
+        border: solid 3px rgb(39, 103, 105);
+        top: 4px;
+        right: 12px;
+    }
+
+    #pop-up button
+    {
+        padding: 4px 7px;
+    }
+}
+
+/* --------------------------- min-width: 800px  --------------------------- */
+@media (min-width: 800px)
+{
+    header 
+    {
+        height: 110px;
+    }
+
+    main
+    {
+        padding: 25px;
+    }
+
+    section 
+    {
+        padding: 35px;
+        border: solid 3px #2FF3E0;
+    }
+
+    article
+    {
+        padding: 25px;
+        box-shadow: 0 0 0 3px rgb(213, 254, 255),
+                    0 0 0 7px rgb(0, 193, 200);
+    }
+
+    section p
+    {
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+        line-height: 25px;
+    }
+
+    h1
+    {
+        padding-left: 35px;
+        line-height: 70px;
+        font-size: 1.6rem;
+    }
+
+    h2
+    {
+        font-size: 1.5rem;
+        color: #1A4A81;
+        margin-top: 10px;
+        margin-bottom: 35px
+    }
+
+    h3
+    {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+
+    p 
+    {
+        font-size: 1rem;
+        line-height: 24px;
+    }
+
+    img
+    {
+        display: block;
+        width: 85%;
+        margin: 30px auto;
+        margin-bottom: 20px;
+    }
+
+    button
+    {
+        padding: 7px 12px 8px 12px;
+    }
+
+    .all-buttons .material-icons
+    {
+        line-height: 22px;
+    }
+
+    .slides button
+    {
+        padding: 5px 10px;
+    }
+
+    .animation button
+    {
+        margin-bottom: 15px;
+    }
+
+    footer 
+    {
+        height: 80px;
+    }
+
+    .footer-adj
+    {
+        font-size: 1.1rem;
+    }
+
+    .container
+    {
+        display: flex;
+    }
+
+    /* 
+    Pop up
+    */
+    #pop-up div
+    {
+        /* basic box model stuff */
+        min-width: 350px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 0 2px rgb(145, 197, 199),
+                    0 0 0 4px cadetblue, 
+                    0 0 0 8px rgb(39, 103, 105);
+    }
+
+    /* the close X button */
+    #close-pop-up
+    {
+        border-radius: 10px;
+        font-size: 1.1rem;
+        border: solid 3px rgb(39, 103, 105);
+        top: 5px;
+        right: 14px;
+    }
+
+    #pop-up button
+    {
+        padding: 4px 7px;
+    }
+}
